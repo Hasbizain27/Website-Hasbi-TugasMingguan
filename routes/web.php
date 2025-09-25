@@ -6,10 +6,10 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/profile', function () {
-    return 'halaman profile';
+    return view('profile');
 });
 Route::get('/berita', function () {
-    return 'halaman berita';
+    return view('berita');
 });
 Route::get('/contact', function () {
     return view('contact');
