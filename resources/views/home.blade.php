@@ -28,7 +28,7 @@
 
 <section class="hero">
     <h1>Selamat Datang di Website Kami</h1>
-    <p>Ini adalah halaman home yang menampilkan informasi singkat,Semoga Kalia suka dengan Website ini</p>
+    <p>Ini adalah halaman home yang menampilkan informasi singkat,dan sedikit kisah kita,Semoga Kalia suka dengan Website ini</p>
     <a href="#" class="btn">Pelajari Lebih Lanjut</a>
   </section>
 
