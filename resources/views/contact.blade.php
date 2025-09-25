@@ -11,7 +11,6 @@
     <title>TI UNIMUS | HOME</title>
   </head>
   <body>
-
     <ul class="nav justify-content-center "style="background-color: #0c424aff;">
   <li class="nav-item">
     <a class="nav-link active" href="#">Home</a>
@@ -26,7 +25,7 @@
     <a class="nav-link" href="#">Kontak</a>
   </li>
 </ul>
-    
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
