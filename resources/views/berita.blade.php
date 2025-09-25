@@ -22,7 +22,7 @@
     <a class="nav-link" href="#">Profil</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Kontakk</a>
+    <a class="nav-link" href="#">Kontak</a>
   </li>
 </ul>
 
