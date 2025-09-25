@@ -11,11 +11,6 @@
     <title>TI UNIMUS | HOME</title>
   </head>
   <body>
-        <h1>Halaman Kontak</h1>
-        
-
-
-
 
     <ul class="nav justify-content-center "style="background-color: #0c424aff;">
   <li class="nav-item">
