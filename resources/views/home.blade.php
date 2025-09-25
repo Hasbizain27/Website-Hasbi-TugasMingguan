@@ -16,13 +16,13 @@
     <a class="nav-link active" href="#">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Berita</a>
+    <a class="nav-link" href="berita">Berita</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Profil</a>
+    <a class="nav-link" href="profile">Profil</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Kontak</a>
+    <a class="nav-link" href="contact">Kontak</a>
   </li>
 </ul>
 
