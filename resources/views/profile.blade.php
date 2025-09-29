@@ -13,7 +13,7 @@
   <body>
     <ul class="nav justify-content-center" style="background-color: #0c424aff;">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link active" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="berita">Berita</a>
@@ -27,32 +27,41 @@
     </ul>
 
     <div class="container mt-5">
-      <h2 class="text-center mb-4">Biodata</h2>
-      <?php
-        // Biodata menggunakan array asosiatif
-        $biodata = [
-          "Nama" => "Hasbi Zain Maulana",
-          "NIM" => "13242420007",
-          "Program Studi" => "Tekologi Informasi",
-          "Universitas" => "UNIMUS",
-          "Email" => "hasbi@gmail.com"
-        ];
-      ?>
+     <!-- Foto profil berbentuk lingkaran -->
+    <img src="{{ asset('images/hasbizain.jpg') }}" 
+     alt="Foto Profil" 
+     class="rounded-circle mb-4" 
+     style="width:150px; height:150px; object-fit:cover;">
 
-      <table class="table table-bordered table-striped">
-        <tbody>
-          <?php
-            // Loop biodata
-            foreach($biodata as $key => $value){
-              echo "<tr>";
-              echo "<th style='width:30%'>$key</th>";
-              echo "<td>$value</td>";
-              echo "</tr>";
-            }
-          ?>
-        </tbody>
-      </table>
-    </div>
+</div>
+
+<div class="container mt-3">
+  <h2 class="text-center mb-4">Biodata</h2>
+  <?php
+    // Biodata menggunakan array asosiatif
+    $biodata = [
+      "Nama" => "Hasbi Zain Maulana",
+      "NIM" => "13242420007",
+      "Program Studi" => "Tekologi Informasi",
+      "Universitas" => "UNIMUS",
+      "Email" => "hasbi@gmail.com"
+    ];
+  ?>
+
+  <table class="table table-bordered table-striped">
+    <tbody>
+      <?php
+        // Loop biodata
+        foreach($biodata as $key => $value){
+          echo "<tr>";
+          echo "<th style='width:30%'>$key</th>";
+          echo "<td>$value</td>";
+          echo "</tr>";
+        }
+      ?>
+    </tbody>
+  </table>
+</div>
 
     <!-- Optional JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

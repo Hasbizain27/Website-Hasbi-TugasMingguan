@@ -14,7 +14,7 @@
     <!-- Menu -->
     <ul class="nav justify-content-center" style="background-color: #0c424aff;">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link active" href="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="berita">Berita</a>
@@ -60,10 +60,15 @@
         <div class="col-md-6">
           <!-- Bisa tambahkan peta / deskripsi lain -->
           <h5>Peta Lokasi</h5>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.632611799294!2d110.44933497485985!3d-7.827974178735176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b8dd92c5e4b%3A0x6e3d4b1b960053aa!2sUniversitas%20Muhammadiyah%20Semarang!5e0!3m2!1sid!2sid!4v1696768799113!5m2!1sid!2sid" 
-            width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
-          </iframe>
+          <div class="col-md-6">
+            <div class="col-md-6">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63358.986271116425!2d109.335491!3d-6.900344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f977d6ba4c9f3%3A0x4027a76e35307b0!2sPemalang%2C%20Kec.%20Pemalang%2C%20Kabupaten%20Pemalang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1696011234567!5m2!1sid!2sid"
+    width="400%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+
         </div>
       </div>
     </div>
