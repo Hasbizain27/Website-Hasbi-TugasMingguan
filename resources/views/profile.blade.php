@@ -11,32 +11,51 @@
     <title>TI UNIMUS | HOME</title>
   </head>
   <body>
-    <ul class="nav justify-content-center "style="background-color: #0c424aff;">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Home</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Berita</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Profil</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Kontak</a>
-  </li>
-</ul>
+    <ul class="nav justify-content-center" style="background-color: #0c424aff;">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="berita">Berita</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="profile">Profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contact">Kontak</a>
+      </li>
+    </ul>
 
-    <!-- Optional JavaScript; choose one of the two! -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4">Biodata</h2>
+      <?php
+        // Biodata menggunakan array asosiatif
+        $biodata = [
+          "Nama" => "Hasbi Zain Maulana",
+          "NIM" => "13242420007",
+          "Program Studi" => "Tekologi Informasi",
+          "Universitas" => "UNIMUS",
+          "Email" => "hasbi@gmail.com"
+        ];
+      ?>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+      <table class="table table-bordered table-striped">
+        <tbody>
+          <?php
+            // Loop biodata
+            foreach($biodata as $key => $value){
+              echo "<tr>";
+              echo "<th style='width:30%'>$key</th>";
+              echo "<td>$value</td>";
+              echo "</tr>";
+            }
+          ?>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Optional JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>
