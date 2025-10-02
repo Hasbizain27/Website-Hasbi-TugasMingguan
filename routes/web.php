@@ -6,7 +6,11 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/profile', function () {
-    return view('profile');
+    return view('profile', [
+        "nama" => "Hasbi Zain Maulana",
+        "nohp" => "085228496778",
+        "foto" => "img/hasbizain.webp",
+    ]);
 });
 Route::get('/berita', function () {
     return view('berita');
@@ -14,6 +18,7 @@ Route::get('/berita', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
 
 // halaman detail berita
 Route::get('/berita/{id}', function ($id) {
