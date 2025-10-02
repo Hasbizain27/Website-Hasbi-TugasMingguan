@@ -28,7 +28,7 @@
 
     <div class="container mt-5">
      <!-- Foto profil berbentuk lingkaran -->
-    <img src="{{ asset('images/hasbizain.jpg') }}" 
+    <img src="{{ $foto }}" width="300px" />
      alt="Foto Profil" 
      class="rounded-circle mb-4" 
      style="width:150px; height:150px; object-fit:cover;">
@@ -38,7 +38,6 @@
 <div class="container mt-3">
   <h2 class="text-center mb-4">Biodata</h2>
   <?php
-    // Biodata menggunakan array asosiatif
     $biodata = [
       "Nama" => "Hasbi Zain Maulana",
       "NIM" => "13242420007",
@@ -62,7 +61,6 @@
     </tbody>
   </table>
 </div>
-
     <!-- Optional JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
