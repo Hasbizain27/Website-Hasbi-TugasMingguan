@@ -22,18 +22,18 @@ Route::get('/berita', function () {
     $data_berita = [
         [
             "judul" => "newss 1",
-            "penulis" => "anjo",
-            "konten" => "pembunuhan tanpa busana daerah ciliwangi",
+            "penulis" => "Tukiman",
+            "konten" => "Pembangunan City walk di daerah Pemalang Jawa Tengah",
         ],
         [
             "judul" => "newss 2",
-            "penulis" => "jamno",
-            "konten" => "menangis meratapi nasib, seorang pemuda ditemukan sedang melahirkan disekitar lampu merah ciliwung",
+            "penulis" => "Saen",
+            "konten" => "Penangkapan Hacker Bjorka",
         ],
         [
             "judul" => "newss 3",
-            "penulis" => "pukime",
-            "konten" => "munaroh menikami",
+            "penulis" => "Munawaroh",
+            "konten" => "Odgj ditemukan di Rumah Sakit Jiwa",
         ],
     ];
     return view('berita', [
