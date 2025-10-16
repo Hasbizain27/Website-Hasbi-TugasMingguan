@@ -1,7 +1,5 @@
 @extends('layouts.main')
 
-
-
 @section('content')
     <h1>Berita</h1>
         @foreach ( $berita as $berita )
