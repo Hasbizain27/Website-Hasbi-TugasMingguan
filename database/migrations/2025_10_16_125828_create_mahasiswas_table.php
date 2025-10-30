@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('mahasiswas', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('NIM')->unique();
-            $table->string('Prodi');
+            $table->biginteger('nim')->unique();
+            $table->string('prodi');
             $table->string('email')->unique();
+            $table->biginteger('nohp');
             $table->timestamps();
         });
     }

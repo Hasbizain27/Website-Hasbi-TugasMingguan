@@ -30,4 +30,4 @@ Route::get('/contact', function () {
 Route::get('/berita',[BeritaController::class, 'index']);
 Route::get('/berita/{slug}', [BeritaController::class, 'tampildata']);
 
-Route::get('/datamahasiswa',[MahasiswaController::class, 'index']);
+Route::get('/mahasiswa',[MahasiswaController::class, 'index'])->name('mahasiswa');
