@@ -18,4 +18,21 @@ class MahasiswaController extends Controller
             
         ]);
     }
+
+    public function tambahmahasiswa()
+    {
+        return view('tambahmahasiswa',[
+            "title" => "Tambah Mahasiswa",
+        ]);
+    }
+
+    public function insertdata(Request $request)
+    {
+
+        /// insert data ke database
+        $data = Mahasiswa::create($request->all());
+
+        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Ditambahkan!');
+
+    }
 }
