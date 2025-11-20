@@ -31,10 +31,10 @@
                     <a class="nav-link" href="{{ url('/profile') }}">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/berita">berita</a>
+                    <a class="nav-link" href="/berita">Berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="/contact">contact</a>
+                    <a class="nav-link" href="/contact">kontak</a>
                 </li>
             </ul>
         </div>
