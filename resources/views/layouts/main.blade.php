@@ -5,19 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout</title>
 
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <style>
+    .navbar-custom {
+        background-color: #0d3c3bff; /* warna bisa diganti */
+    }
+</style>
+
 </head>
 <body>
-    <!-- ✅ Navbar harus di sini -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <a class="navbar-brand mx-auto" href="#">Hasbi TI</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav mx-auto">
                 <li class="nav-item ">
                     <a class="nav-link" href="/">Home</a>
                 </li>
@@ -34,12 +40,10 @@
         </div>
     </nav>
 
-    <!-- Konten halaman -->
-    <div class="container">
+    <div class="container mt-3">
         @yield('content')
     </div>
 
-    <!-- Script -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

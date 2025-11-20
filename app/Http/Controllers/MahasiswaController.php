@@ -35,4 +35,23 @@ class MahasiswaController extends Controller
         return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Ditambahkan!');
 
     }
+
+    public function tampildata($id)
+    {
+        $data = Mahasiswa::find($id);
+
+        return view("edit", [
+            "title" => "Edit Mahasiswa",
+            "data" => $data,
+        ]);
+    }
+
+    public function editdata(Request $request, $id)
+    {
+        $data = Mahasiswa::find($id);
+
+        $data->update($request->all());
+
+        return redirect()->route('mahasiswa')->with('success', 'Data Berhasil Di Edit!');
+    }
 }
