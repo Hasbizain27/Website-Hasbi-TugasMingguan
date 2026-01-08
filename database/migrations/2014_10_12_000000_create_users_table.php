@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('prodi')->nullable();
             $table->string('email')->unique();
             $table->integer('nohp');
+            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

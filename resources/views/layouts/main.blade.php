@@ -24,18 +24,35 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item ">
+                <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                 </li>
+                @auth
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/profile') }}">Profile</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="/mahasiswa">Mahasiswa</a>
+                </li>
+                @endauth
+                <li class="nav-item">
                     <a class="nav-link" href="/berita">Berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/contact">kontak</a>
+                    <a class="nav-link" href="/contact">Kontak</a>
                 </li>
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                @else
+                <li class="nav-item">
+                    <form action="/logout" method="post" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-link nav-link" style="color: white; text-decoration: none; padding: 0.5rem 1rem;">Logout</button>
+                    </form>
+                </li>
+                @endguest
             </ul>
         </div>
     </nav>
