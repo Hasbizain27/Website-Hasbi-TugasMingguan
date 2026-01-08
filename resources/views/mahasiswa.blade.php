@@ -6,6 +6,10 @@
     <a href ="/tambahmahasiswa">
         <button type="button" class="btn btn-success">Tambah Data</button>
     </a>
+    <form action="/logout" method="post" class="d-inline">
+        @csrf
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
     <br>
     @if ($message = Session::get('success'))
         

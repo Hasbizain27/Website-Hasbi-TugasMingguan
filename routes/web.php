@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\LoginController;
 use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 
@@ -9,7 +10,7 @@ Route::get('/', function () {
     return view('home', [
         "title" => "home",
     ]);
-});
+})->middleware('auth');
 
 Route::get('/profile', function () {
     return view('profile',[
@@ -21,12 +22,15 @@ Route::get('/profile', function () {
 });
 
 
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+Route::post('/logout', [LoginController::class, 'logout']);
 
 
 Route::get('/berita',[BeritaController::class, 'index']);
 Route::get('/berita/{slug}', [BeritaController::class, 'tampildata']);
 
-Route::get('/mahasiswa',[MahasiswaController::class, 'index'])->name('mahasiswa');
+Route::get('/mahasiswa',[MahasiswaController::class, 'index'])->name('mahasiswa')->middleware('auth');
 
 Route::get('/tambahmahasiswa',[MahasiswaController::class, 'tambahmahasiswa'])->name('tambahmahasiswa');
 Route::POST('/insertdata',[MahasiswaController::class, 'insertdata'])->name('insertdata');
