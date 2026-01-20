@@ -1,72 +1,63 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=No.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <title>Detail Berita | Liga Indonesia</title>
+@extends('layouts.main')
 
-</head>
-<body style="background-color: #f4f6f7;">
-  <!-- NAVBAR -->
+@section('content')
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <!-- Article Header -->
+            <article class="card border-0 shadow-lg">
+                <div class="card-header text-center">
+                    <h1 class="card-title font-weight-bold mb-0">
+                        <?php echo $judul; ?>
+                    </h1>
+                </div>
 
-  <ul class="nav justify-content-center" style="background-color: #0c424aff;">
-    <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
-    <li class="nav-item"><a class="nav-link text-white active" href="/berita">Berita</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="/profile">Profil</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="/contact">Kontak</a></li>
+                <div class="card-body p-5">
+                    <!-- Article Meta -->
+                    <div class="article-meta text-center mb-5 pb-4 border-bottom">
+                        <small class="text-muted">
+                            <i class="fas fa-calendar-alt"></i>
+                            <strong><?php echo $tanggal; ?></strong>
+                        </small>
+                    </div>
 
-  </ul>
-  <div class="container mt-5">
-    <h2 class="mb-3"><?php echo $judul; ?></h2>
-    <p class="text-muted"><?php echo $tanggal; ?></p>
-    <img src="<?php echo $gambar; ?>" class="img-fluid rounded mb-4" alt="Gambar Berita">
-    <p style="text-align: justify; font-size: 18px;">
+                    <!-- Article Image -->
+                    @if(isset($gambar))
+                    <div class="mb-5">
+                        <img src="<?php echo $gambar; ?>" class="img-fluid rounded shadow-sm" alt="Gambar Berita" style="max-height: 400px; width: 100%; object-fit: cover;">
+                    </div>
+                    @endif
 
-      <?php echo $isi; ?>
-    </p>
-    <a href="/berita" class="btn btn-secondary mt-3">← Kembali ke Daftar Berita</a>
+                    <!-- Article Content -->
+                    <div class="article-content" style="text-align: justify; line-height: 2; font-size: 1.1rem;">
+                        <p class="text-dark">
+                            <?php echo $isi; ?>
+                        </p>
+                    </div>
 
-  </div>
-  <footer class="text-center p-3 bg-dark text-white mt-5">
-    &copy; <?php echo date("Y"); ?> TI UNIMUS | Berita Liga Indonesia
-  </footer>
+                    <!-- Back Button -->
+                    <div class="text-center mt-5 pt-4 border-top">
+                        <a href="/berita" class="btn btn-primary btn-lg">
+                            <i class="fas fa-arrow-left"></i> Kembali ke Daftar Berita
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
 
-</body>
+<style>
+    .article-meta small {
+        background: #f0fdf9;
+        padding: 0.7rem 1.5rem;
+        border-radius: 20px;
+        border: 1px solid #d0e8e6;
+        display: inline-block;
+    }
 
-</html>
-
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous">
-  <title>Detail Berita | Liga Indonesia</title>
-</head>
-<body style="background-color: #f4f6f7;">
-
-  <!-- NAVBAR -->
-  <ul class="nav justify-content-center" style="background-color: #0c424aff;">
-    <li class="nav-item"><a class="nav-link text-white" href="/">Home</a></li>
-    <li class="nav-item"><a class="nav-link text-white active" href="/berita">Berita</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="/profile">Profil</a></li>
-    <li class="nav-item"><a class="nav-link text-white" href="/contact">Kontak</a></li>
-  </ul>
-
-  <div class="container mt-5">
-    <h2 class="mb-3"><?php echo $judul; ?></h2>
-    <p class="text-muted"><?php echo $tanggal; ?></p>
-    <img src="<?php echo $gambar; ?>" class="img-fluid rounded mb-4" alt="Gambar Berita">
-    <p style="text-align: justify; font-size: 18px;">
-      <?php echo $isi; ?>
-    </p>
-
-    <a href="/berita" class="btn btn-secondary mt-3">← Kembali ke Daftar Berita</a>
-  </div>
-
-  <footer class="text-center p-3 bg-dark text-white mt-5">
-    &copy; <?php echo date("Y"); ?> TI UNIMUS | Berita Liga Indonesia
-  </footer>
-</body>
-</html>
+    .article-content p {
+        margin-bottom: 1.5rem;
+    }
+</style>
+@endsection
