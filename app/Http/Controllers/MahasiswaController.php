@@ -58,6 +58,10 @@ class MahasiswaController extends Controller
     public function deletedata($id)
     {
         $data = Mahasiswa::find($id);
+        
+        if (!$data) {
+            return redirect()->route('mahasiswa')->with('error', 'Data tidak ditemukan!');
+        }
 
         $data->delete();
 

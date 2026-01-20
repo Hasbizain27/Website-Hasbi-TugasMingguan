@@ -141,7 +141,23 @@
             cancelButtonText: "Batal"
         }).then((result) => {
             if (result.isConfirmed) {
-                window.location = "/delete/" + id;
+                let form = document.createElement('form');
+                form.method = 'POST';
+                form.action = '/deletedata/' + id;
+                form.enctype = 'multipart/form-data';
+                
+                // Get CSRF token from meta tag
+                let token = document.querySelector('meta[name="csrf-token"]');
+                if (token) {
+                    let csrfInput = document.createElement('input');
+                    csrfInput.type = 'hidden';
+                    csrfInput.name = '_token';
+                    csrfInput.value = token.getAttribute('content');
+                    form.appendChild(csrfInput);
+                }
+                
+                document.body.appendChild(form);
+                form.submit();
             }
         })
     });
